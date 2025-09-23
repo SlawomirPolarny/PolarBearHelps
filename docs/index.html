@@ -1,10 +1,80 @@
 <!doctype html>
-<meta charset="utf-8"><script>
-const lang = (navigator.language || '').toLowerCase();
-const to = lang.startsWith('pl')
-? 'privacy-policy-pl.html'
-: 'privacy-policy-en.html';
-location.replace(to);
-</script>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Polar Bear Helps — Official site</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Polar Bear Helps — a simple screen filter to reduce visual stimuli and support digital wellbeing.">
+  <meta property="og:title" content="Polar Bear Helps">
+  <meta property="og:description" content="A simple screen filter — fewer stimuli, more calm.">
+  <meta property="og:type" content="website">
+   <meta property="og:url" content="https://slawomirpolarny.github.io/PolarBearHelps/">
+  <style>
+    :root {
+      --teal: #18B1AC;
+      --blue: #3D94F0;
+      --text: #0d1b2a;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; color: var(--text); line-height: 1.6; }
+    header { background: var(--teal); color: #fff; padding: 28px 16px; }
+    header .wrap { max-width: 960px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .subtitle { opacity: .95; margin: 0; }
+    main { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+    .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,.06); margin: 16px 0; }
+    .btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .btn {
+      display: inline-block; padding: 12px 18px; border-radius: 10px; text-decoration: none; font-weight: 600;
+    }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-outline { border: 2px solid var(--blue); color: var(--blue); }
+    .small { font-size: 14px; color: #444; }
+    footer { padding: 24px 16px; text-align: center; color: #666; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0b1320; color: #e9eef5; }
+      .card { background: #0f1b2f; box-shadow: none; }
+      .small { color: #b7c2d0; }
+      a { color: #6eb4ff; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Polar Bear Helps</h1>
+      <p class="subtitle">A simple screen filter — fewer stimuli, more calm.</p>
+    </div>
+  </header>
 
-<p>Redirecting…</p>
+  <main>
+    <section class="card">
+      <h2>About the app</h2>
+      <p>The app overlays your screen with a uniform, less‑stimulating color to “break” the pull of colorful, attention‑grabbing interfaces. It works gently — helping you put the phone down and return to the real world.</p>
+      <div class="btns">
+        <!-- TODO: replace with your Google Play link when available -->
+        <!--<a class="btn btn-outline" href="#" onclick="alert('Google Play link coming soon');return false;">View on Google Play</a>-->
+        <!-- TODO: replace with your BuyCoffee link -->
+        <!--<a class="btn btn-primary" href="https://buycoffee.to/YOUR_PROFILE" target="_blank" rel="noopener noreferrer">Support on BuyCoffee</a>-->
+      </div>
+      <p class="small">Questions? Write to: <a href="mailto:slawomir.polarny@gmail.com">slawomir.polarny@gmail.com</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Privacy Policy</h2>
+      <p>We care about privacy — the app does not collect user data. Details here:</p>
+      <ul>
+        <li><a href="./privacy-policy-en.html">Privacy Policy (EN)</a></li>
+        <li><a href="./privacy-policy-pl.html">Polityka prywatności (PL)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="y"></span> Polar Bear Helps • Support the project on BuyCoffee</p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
